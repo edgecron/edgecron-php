@@ -1,0 +1,41 @@
+{
+  "name": "edgecron/edgecron-php",
+  "description": "Official PHP SDK for the EdgeCron webhook scheduling and callback delivery platform.",
+  "type": "library",
+  "license": "MIT",
+  "homepage": "https://www.edgecron.com",
+  "authors": [
+    {
+      "name": "EdgeCron Team",
+      "homepage": "https://www.edgecron.com"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/edgecron/edgecron-php/issues",
+    "source": "https://github.com/edgecron/edgecron-php"
+  },
+  "require": {
+    "php": "^8.2",
+    "guzzlehttp/guzzle": "^7.9"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^11.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "EdgeCron\\": "src/"
+    },
+    "classmap": [
+      "src/Services.php",
+      "src/Types.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "EdgeCron\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "phpunit --bootstrap vendor/autoload.php tests --testdox"
+  }
+}
